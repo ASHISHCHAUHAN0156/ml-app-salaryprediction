@@ -1,3 +1,10 @@
-git add render.yaml
-git commit -m "Add render.yaml"
-git push
+# render.yaml
+services:
+  - type: web
+    name: ml-app-salaryprediction-3
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "run app.py" # Adjust to your entry point
+    autoDeploy: true
+    runtime: python
+    region: oregon # or any other region of your choice
