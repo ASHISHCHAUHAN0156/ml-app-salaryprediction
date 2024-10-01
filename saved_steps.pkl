@@ -1,0 +1,11 @@
+import pickle
+
+def load_model():
+    # Opens the 'saved_steps.pkl' file in binary mode for reading
+    with open('saved_steps.pkl', 'rb') as file:
+        # Loads the serialized data into the 'data' variable
+        data = pickle.load(file)
+    return data
+
+# Calling the function to load the saved data
+data = load_model()
